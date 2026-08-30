@@ -1,0 +1,234 @@
+/* ============================================================
+   LUNEL — Haute Couture Lingerie & Loungewear Design System
+   ============================================================ */
+:root {
+  --color-black: #111111;
+  --color-dark-gray: #1a1a1a;
+  --color-champagne: #C5A059;
+  --color-champagne-light: #E5C88A;
+  --color-champagne-dark: #A4813B;
+  --color-ivory: #FDFBF7;
+  --color-ivory-dark: #F4EFE6;
+  --color-blush: #F8ECE9;
+  --color-blush-dark: #E6D0CB;
+  --color-white: #FFFFFF;
+  --color-muted: #7E7873;
+  --color-border: rgba(197, 160, 89, 0.2);
+  --color-border-dark: rgba(255, 255, 255, 0.12);
+
+  --font-display: 'Cormorant Garamond', serif;
+  --font-body: 'Plus Jakarta Sans', sans-serif;
+
+  --shadow-soft: 0 10px 30px -10px rgba(0, 0, 0, 0.08);
+  --shadow-gold: 0 12px 35px -10px rgba(197, 160, 89, 0.25);
+  --shadow-lift: 0 20px 40px -15px rgba(0, 0, 0, 0.15);
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-fast: 0.25s var(--ease-out);
+  --transition-medium: 0.4s var(--ease-out);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-ivory);
+  color: var(--color-black);
+  font-family: var(--font-body);
+  font-weight: 400;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  color: var(--color-black);
+  line-height: 1.2;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: var(--font-body);
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Layout Utilities */
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section {
+  padding: 100px 0;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 60px 0;
+  }
+}
+
+.section-title {
+  font-size: clamp(32px, 4vw, 48px);
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: var(--color-muted);
+  font-size: 15px;
+  max-width: 600px;
+  margin: 0 auto 50px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.eyebrow {
+  font-family: var(--font-body);
+  font-size: 12px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--color-champagne);
+  font-weight: 600;
+  margin-bottom: 12px;
+  display: block;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 32px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  transition: all var(--transition-medium);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary {
+  background-color: var(--color-black);
+  color: var(--color-ivory);
+  border: 1px solid var(--color-black);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-champagne);
+  border-color: var(--color-champagne);
+  color: var(--color-black);
+  box-shadow: var(--shadow-gold);
+}
+
+.btn-gold {
+  background-color: var(--color-champagne);
+  color: var(--color-black);
+  border: 1px solid var(--color-champagne);
+}
+
+.btn-gold:hover {
+  background-color: var(--color-black);
+  color: var(--color-ivory);
+  border-color: var(--color-black);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--color-black);
+  border: 1px solid var(--color-black);
+}
+
+.btn-outline:hover {
+  background-color: var(--color-black);
+  color: var(--color-ivory);
+}
+
+.btn-outline-light {
+  background-color: transparent;
+  color: var(--color-ivory);
+  border: 1px solid rgba(253, 251, 247, 0.4);
+}
+
+.btn-outline-light:hover {
+  background-color: var(--color-ivory);
+  color: var(--color-black);
+  border-color: var(--color-ivory);
+}
+
+.btn-sm {
+  padding: 10px 20px;
+  font-size: 11px;
+}
+
+/* Luxury Card styles */
+.luxury-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  transition: all var(--transition-medium);
+}
+
+.luxury-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-soft);
+  border-color: var(--color-champagne);
+}
+
+/* Animations */
+.fade-in {
+  animation: fadeIn 0.8s var(--ease-out) forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Toast alert */
+.toast {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: var(--color-black);
+  color: var(--color-ivory);
+  padding: 16px 24px;
+  border-left: 4px solid var(--color-champagne);
+  box-shadow: var(--shadow-lift);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  animation: slideUp 0.4s var(--ease-out);
+}
+
+@keyframes slideUp {
+  from { transform: translateY(100%); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}

@@ -1,0 +1,13 @@
+com/lunel/controller/NewsletterController.class
+com/lunel/repository/ContactMessageRepository.class
+com/lunel/model/Product.class
+com/lunel/model/NewsletterSubscription.class
+com/lunel/controller/ProductController.class
+com/lunel/model/ContactMessage.class
+com/lunel/LunelApplication.class
+com/lunel/model/Category.class
+com/lunel/config/DataSeeder.class
+com/lunel/repository/CategoryRepository.class
+com/lunel/controller/ContactController.class
+com/lunel/repository/ProductRepository.class
+com/lunel/repository/NewsletterSubscriptionRepository.class

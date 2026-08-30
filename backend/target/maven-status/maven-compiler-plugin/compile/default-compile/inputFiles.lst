@@ -1,0 +1,13 @@
+/app/backend/src/main/java/com/lunel/model/NewsletterSubscription.java
+/app/backend/src/main/java/com/lunel/repository/CategoryRepository.java
+/app/backend/src/main/java/com/lunel/model/ContactMessage.java
+/app/backend/src/main/java/com/lunel/repository/NewsletterSubscriptionRepository.java
+/app/backend/src/main/java/com/lunel/controller/NewsletterController.java
+/app/backend/src/main/java/com/lunel/controller/ProductController.java
+/app/backend/src/main/java/com/lunel/model/Product.java
+/app/backend/src/main/java/com/lunel/LunelApplication.java
+/app/backend/src/main/java/com/lunel/repository/ProductRepository.java
+/app/backend/src/main/java/com/lunel/controller/ContactController.java
+/app/backend/src/main/java/com/lunel/repository/ContactMessageRepository.java
+/app/backend/src/main/java/com/lunel/config/DataSeeder.java
+/app/backend/src/main/java/com/lunel/model/Category.java
